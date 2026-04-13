@@ -1,0 +1,164 @@
+====================================
+Figma AI Chat - 项目运行说明
+====================================
+
+本项目是一个 AI 聊天应用，包含前端（React）和后端（FastAPI）两部分。
+
+------------------------------------
+一、环境要求
+------------------------------------
+
+前端：
+- Node.js v20.x（已安装在 E:\Program Files\nodejs）
+- npm 10.x（随 Node.js 自动安装）
+
+后端：
+- Python 3.10（虚拟环境在 E:\QRTlongchaintraining\ENV）
+- FastAPI、Uvicorn 等依赖（需安装）
+
+------------------------------------
+二、启动步骤（按顺序执行）
+------------------------------------
+
+【第一步】启动后端服务
+
+方法 1：使用启动脚本（推荐）
+  1. 双击运行：backend\start.bat
+  2. 等待看到提示："Uvicorn running on http://0.0.0.0:8000"
+
+方法 2：手动启动
+  1. 打开命令行窗口
+  2. 输入以下命令：
+     cd E:\QRTlongchaintraining\PROJ\figma测试\backend
+     E:\QRTlongchaintraining\ENV\Scripts\python.exe main.py
+  3. 等待看到提示："Uvicorn running on http://0.0.0.0:8000"
+
+验证后端启动成功：
+  - 浏览器访问：http://localhost:8000
+  - 应显示：{"status":"ok","message":"AI Chat API is running"}
+
+
+【第二步】启动前端服务
+
+注意：需要打开一个新的命令行窗口
+
+方法 1：快速启动
+  1. 打开新的命令行窗口
+  2. 输入以下命令：
+     cd E:\QRTlongchaintraining\PROJ\figma测试\frontend
+     $env:Path = "E:\Program Files\nodejs;$env:Path"
+     npm run dev
+  3. 等待看到提示："VITE v6.3.5 ready in xxx ms"
+  4. 看到："➜ Local: http://localhost:5173/"
+
+方法 2：如果已安装过依赖
+  1. 打开新的命令行窗口
+  2. 输入以下命令：
+     cd E:\QRTlongchaintraining\PROJ\figma测试\frontend
+     $env:Path = "E:\Program Files\nodejs;$env:Path"
+     npm install
+     npm run dev
+
+验证前端启动成功：
+  - 浏览器访问：http://localhost:5173
+  - 应能看到 AI 聊天界面
+
+------------------------------------
+三、使用网页
+------------------------------------
+
+1. 打开浏览器，访问：http://localhost:5173
+2. 在聊天输入框中输入消息
+3. 点击发送或按回车键
+4. 等待 AI 回复（基于通义千问大模型）
+
+------------------------------------
+四、停止服务
+------------------------------------
+
+停止前端：
+  - 在前端运行的命令行窗口按 Ctrl+C
+
+停止后端：
+  - 在后端运行的命令行窗口按 Ctrl+C
+  - 或关闭命令行窗口
+
+------------------------------------
+五、常见问题
+------------------------------------
+
+Q1: 端口被占用怎么办？
+A1: 关闭占用端口的程序，或修改配置使用其他端口
+
+Q2: 前端无法连接后端？
+A2: 检查后端是否已启动（端口 8000）
+    查看后端控制台是否有错误信息
+
+Q3: 依赖安装失败？
+A3: 确保网络连接正常
+    后端：cd backend
+          E:\QRTlongchaintraining\ENV\Scripts\python.exe -m pip install -r requirements.txt
+    前端：cd frontend
+          $env:Path = "E:\Program Files\nodejs;$env:Path"
+          npm install
+
+Q4: 出现跨域错误？
+A4: 确保先启动后端，再启动前端
+    后端已配置 CORS，应该不会出现跨域问题
+
+------------------------------------
+六、技术栈信息
+------------------------------------
+
+前端：
+- React 18.3.1 + TypeScript
+- Vite 6.3.5
+- TailwindCSS 4.1.12
+- Material-UI 组件库
+
+后端：
+- FastAPI 0.109.0
+- Uvicorn 0.27.0
+- HTTPX（HTTP 客户端）
+- 通义千问 API（AI 模型）
+
+------------------------------------
+七、文件结构
+------------------------------------
+
+figma测试/
+├── frontend/              # 前端项目
+│   ├── src/
+│   │   └── app/
+│   │       ├── App.tsx           # 主应用组件
+│   │       └── services/
+│   │           └── chatApi.ts    # API 调用服务
+│   ├── .env                     # 环境变量配置
+│   └── vite.config.ts           # Vite 配置（含代理）
+│
+├── backend/               # 后端项目
+│   ├── main.py            # FastAPI 主应用
+│   ├── config.py          # 配置文件（API Key 等）
+│   └── requirements.txt   # Python 依赖
+│
+├── start.bat             # 后端启动脚本
+└── 启动说明.bat           # 使用说明脚本
+
+====================================
+技术支持与调试
+====================================
+
+查看后端日志：
+- 后端运行窗口会显示所有 API 请求日志
+
+查看前端日志：
+- 浏览器按 F12 打开开发者工具
+- 查看 Console 标签页
+
+测试 API：
+- 健康检查：GET http://localhost:8000/
+- API 文档：http://localhost:8000/docs
+
+====================================
+祝您使用愉快！
+====================================

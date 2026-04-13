@@ -1,0 +1,52 @@
+{
+  "bundle_date": "2026-04-09",
+  "goal": "为 index:update / analyzeIndexUpdatePlan() 增加 churn 阈值与成本估算，并将长期记忆迁到独立表 + FTS5；完成默认路径硬化、阈值配置化、文档同步、设计决策沉淀与交付包整理",
+  "status": {
+    "acceptance_probe": 0,
+    "build": "passed",
+    "tests": "268/268 passed"
+  },
+  "checkpoint": {
+    "id": "chk_dd4e63fc1634",
+    "title": "2026-04-09 index-churn-longterm-fts-v6"
+  },
+  "decision": {
+    "id": "2026-04-09-index-update-and-long-term-storage",
+    "title": "Make index update escalation configurable and persist long-term memory in dedicated tables"
+  },
+  "artifacts": {
+    "update_summary": "docs/changelog/2026-04-09.md",
+    "acceptance_report": "docs/archive/iterations/2026-04-09/iteration-6-index-and-memory-acceptance-report.md",
+    "handoff_summary": "docs/archive/deliveries/2026-04-09-index-and-memory/handoff.md",
+    "pr_summary": "docs/archive/deliveries/2026-04-09-index-and-memory/pr-summary.md",
+    "pr_body": "docs/archive/deliveries/2026-04-09-index-and-memory/pr-body.md",
+    "commit_message": "docs/archive/deliveries/2026-04-09-index-and-memory/commit-message.md",
+    "delivery_commands": "docs/archive/deliveries/2026-04-09-index-and-memory/delivery-commands.md",
+    "delivery_runbook": "docs/archive/deliveries/2026-04-09-index-and-memory/delivery-runbook.md",
+    "team_message": "docs/archive/deliveries/2026-04-09-index-and-memory/team-update-message.md",
+    "release_note": "docs/archive/deliveries/2026-04-09-index-and-memory/release-note.md",
+    "merge_checklist": "docs/archive/deliveries/2026-04-09-index-and-memory/merge-checklist.md",
+    "delivery_index": "docs/archive/deliveries/2026-04-09-index-and-memory/delivery-bundle.md",
+    "changeset_map": "docs/archive/deliveries/2026-04-09-index-and-memory/changeset-map.md"
+  },
+  "run_artifacts": {
+    "results_log": "research-results.tsv",
+    "state": "autoresearch-state.json",
+    "acceptance_script": ".autoresearch/remaining-acceptance-failures.mts"
+  },
+  "commands": {
+    "delivery_all": "pnpm delivery:all",
+    "delivery_bundle": "pnpm delivery:bundle",
+    "delivery_commit_message": "pnpm delivery:commit-message",
+    "delivery_handoff": "pnpm delivery:handoff",
+    "delivery_checklist": "pnpm delivery:checklist",
+    "delivery_manifest": "pnpm delivery:manifest",
+    "delivery_pr": "pnpm delivery:pr",
+    "delivery_release_note": "pnpm delivery:release-note",
+    "delivery_runbook": "pnpm delivery:runbook",
+    "delivery_team_update": "pnpm delivery:team-update",
+    "delivery_full": "pnpm delivery:full",
+    "verify_delivery_artifacts": "pnpm verify:delivery:artifacts",
+    "verify_delivery": "pnpm verify:delivery"
+  }
+}

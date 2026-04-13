@@ -1,0 +1,27 @@
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+pydantic==2.5.3
+httpx==0.26.0
+
+
+# LangGraph 聊天助手依赖
+
+# FastAPI 框架
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+
+# HTTP 客户端
+httpx==0.25.2
+
+# LangChain & LangGraph
+langchain==0.1.0
+langchain-core==0.1.0
+langgraph==0.0.18
+langchain-openai==0.0.2
+
+# 工具库
+pydantic==2.5.2
+
+# 时间处理（基础实用包）
+pytz==2023.3

@@ -1,0 +1,7 @@
+.
+├── 2024-Market-Layout
+│  └── East-China-Region.md：华东市场35%营收；智能手表耳机销量；华为小米竞对；2025目标22%份额
+│
+└── Product-Line-A-Smartwatch-Series
+   ├── SW-1500-Sport.md：SW-1500运动手表：1.5" TFT、LiteOS、30运动模式、IP68、¥899
+   └── SW-2100-Flagship.md：SW-2100旗舰智能手表：2.1" AMOLED、WearOS 4.0、双频GPS、500mAh、IP68、钛合金、¥2999

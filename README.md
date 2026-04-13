@@ -237,36 +237,9 @@ npm run preview
 
 ---
 
-## 📄 许可证
-
-MIT License
-
----
-
 ## 🤝 贡献指南
 
 欢迎提交 Issue 和 Pull Request！
-
-### 开发流程
-1. Fork 本仓库
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启 Pull Request
-
-### 代码规范
-- Python：遵循 PEP 8，使用 Black 格式化
-- TypeScript：遵循 ESLint + Prettier 配置
-- 提交信息：使用 Conventional Commits 规范
-
----
-
-## 📞 技术支持
-
-- **架构问题**：查阅 `docs/ContextAtlas集成说明.md`
-- **API 使用**：访问 `http://localhost:8000/docs` 查看 Swagger 文档
-- **RAG 配置**：查阅 `RAG集成说明.md`
-- **Bug 反馈**：提交 GitHub Issue，附上复现步骤和日志
 
 ---
 

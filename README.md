@@ -218,11 +218,6 @@ python api_server.py
 cd backendtest
 uvicorn api_server:app --host 0.0.0.0 --port 8000 --reload
 ```
-
-### 验证服务
-- **健康检查**：`http://localhost:8000/`
-- **API 文档**：`http://localhost:8000/docs`（Swagger UI）
-
 ---
 
 ## 🔮 未来演进方向
@@ -245,11 +240,6 @@ uvicorn api_server:app --host 0.0.0.0 --port 8000 --reload
 - [ ] 支持插件市场（第三方智能体接入）
 - [ ] 多语言国际化支持
 
----
-
-## 🤝 贡献指南
-
-欢迎提交 Issue 和 Pull Request！
 
 ---
 

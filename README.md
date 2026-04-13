@@ -214,6 +214,40 @@ npm run build
 npm run preview
 ```
 ---
+## 🚀 后端部署与运行
+
+### 方式一：使用启动脚本（推荐）
+```bash
+docs\启动说明.bat  # Windows
+```
+
+### 方式二：手动启动
+```bash
+cd backendtest
+python api_server.py
+```
+
+### 方式三：使用 Uvicorn 命令行
+```bash
+cd backendtest
+uvicorn api_server:app --host 0.0.0.0 --port 8000 --reload
+```
+
+### 验证服务
+- **健康检查**：`http://localhost:8000/`
+- **API 文档**：`http://localhost:8000/docs`（Swagger UI）
+
+### 主要 API 接口
+
+| 方法 | 路径 | 说明 |
+|------|------|------|
+| POST | `/api/chat` | 普通聊天接口 |
+| POST | `/api/chat/stream` | 流式聊天接口（SSE） |
+| GET | `/api/chat/history` | 获取对话历史 |
+| DELETE | `/api/chat/history` | 清空对话历史 |
+| GET | `/api/greeting` | 获取时段问候语 |
+
+---
 
 ## 🔮 未来演进方向
 
